@@ -1,0 +1,59 @@
+/* Estilos generales y mobile-first (Esquema de color MORENA) */
+:root {
+    --primary-color: #8D1D3A; /* Guinda / Vino (Principal) */
+    --accent-color: #F8C300; /* Oro / Amarillo (Acento) */
+    --background-light: #f8f9fa; /* Fondo gris muy claro para contraste */
+    --text-dark: #343a40; /* Texto oscuro */
+    --card-bg: #ffffff; /* Fondo de tarjetas (Blanco) */
+    --border-color: #dee2e6; /* Color de borde suave */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+/* Header */
+.site-header {
+    background-color: var(--primary-color); /* Guinda */
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px var(--shadow-light);
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+/* Search and Filter Section */
+.search-filter-section {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.search-input,
+.filter-select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--primary-color); /* Borde Guinda */
+    border-radius: 8px;
+    font-size: 1em;
+    box-shadow: 0 0 5px rgba(141, 29, 58, 0.2); /* Sombra suave Guinda */
+    background-color: var(--card-bg);
+}
