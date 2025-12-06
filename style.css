@@ -1,59 +1,79 @@
-/* Estilos generales y mobile-first (Esquema de color MORENA) */
-:root {
-    --primary-color: #8D1D3A; /* Guinda / Vino (Principal) */
-    --accent-color: #F8C300; /* Oro / Amarillo (Acento) */
-    --background-light: #f8f9fa; /* Fondo gris muy claro para contraste */
-    --text-dark: #343a40; /* Texto oscuro */
-    --card-bg: #ffffff; /* Fondo de tarjetas (Blanco) */
-    --border-color: #dee2e6; /* Color de borde suave */
-    --shadow-light: rgba(0, 0, 0, 0.1);
+@font-face {
+    font-family: 'GMX Regular';
+    src: url('assets/fonts/GMX-Regular.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-light);
-    color: var(--text-dark);
-    line-height: 1.6;
+    font-family: 'GMX Regular';
+    /* La regla estándar que los navegadores modernos entienden */
+    text-size-adjust: 100%; 
+    
+    /* La regla con prefijo, aunque el navegador se queje de ella */
+    -webkit-text-size-adjust: 100%;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px 0;
+header {
+    /* Define la imagen de fondo */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./assets/img/hero2.jpg') no-repeat center center;
+    /* Asegura que la imagen cubra toda la sección */
+    background-size: cover;
+    /* Le da una altura mínima para que se vea bien */
+    min-height: 80vh;
 }
 
-/* Header */
-.site-header {
-    background-color: var(--primary-color); /* Guinda */
+.btn_gob {
+    background-color: #6a1c32;
+    color: #ffffff;
+    border-color: #6a1c32;
+}
+
+.btn_gob:hover {
+    background-color: #53152b;
+    color: #ffffff;
+    border-color: #53152b;
+}
+
+.btn_gob:active {
+    background-color: #993233 !important; /* Añade !important aquí */
+    color: #ffffff !important;
+    border-color: #993233 !important;
+}
+
+.btn_gob:focus,
+.btn_gob:focus-visible {
+    outline: 0;
+    /* Establece una sombra que coincida con tu color base. 
+       0 0 0 0.25rem es el formato estándar de Bootstrap.
+       (98, 17, 50 es el equivalente RGB de tu color #621132)
+    */
+    box-shadow: 0 0 0 0.25rem rgba(98, 17, 50, 0.5); 
+}
+
+.gob_txt_primary {
+    color: #b38e5d;
+}
+
+.gob_navbar {
+    background-color: #ffff; 
+}
+
+.h-contacto {
+    background-color: #3c3c3b;
+    background-size: cover;
+    min-height: 60vh;
+    /* Altura mínima de la sección */
+    max-height: 60vh;
+}
+
+a,
+.h-contacto {
+    text-decoration: none;
     color: white;
-    padding: 25px 0;
-    text-align: center;
-    box-shadow: 0 4px 6px var(--shadow-light);
 }
 
-.site-header h1 {
-    margin: 0;
-    font-size: 1.8em;
-}
-
-/* Search and Filter Section */
-.search-filter-section {
-    padding: 20px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.search-input,
-.filter-select {
-    width: 100%;
-    padding: 12px 15px;
-    border: 2px solid var(--primary-color); /* Borde Guinda */
-    border-radius: 8px;
-    font-size: 1em;
-    box-shadow: 0 0 5px rgba(141, 29, 58, 0.2); /* Sombra suave Guinda */
-    background-color: var(--card-bg);
+.gob_footer { 
+    background-color: #3c3c3b;
+    color: #b38e5d;
 }
