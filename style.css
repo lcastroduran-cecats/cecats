@@ -14,6 +14,14 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+.directorio {
+    color: #b38e5d !important;
+    background: #53152b;
+    min-height: 30vh;
+    font-style: normal;
+    font-weight: bold;
+}
+
 header {
     /* Define la imagen de fondo */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./assets/img/hero2.jpg') no-repeat center center;
@@ -22,6 +30,8 @@ header {
     /* Le da una altura mínima para que se vea bien */
     min-height: 80vh;
 }
+
+
 
 .btn_gob {
     background-color: #6a1c32;
